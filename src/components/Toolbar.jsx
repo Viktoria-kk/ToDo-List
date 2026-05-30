@@ -6,7 +6,7 @@ import ThemeToggle from './ThemeToggle.jsx';
 function Toolbar({ filter, isDark, search, onFilterChange, onSearchChange, onThemeToggle }) {
   return (
     <div className="toolbar">
-      <SearchBar value={search} onChange={onSearchChange} />
+      <SearchBar isDark={isDark} value={search} onChange={onSearchChange} />
       <FilterDropdown value={filter} onChange={onFilterChange} />
       <ThemeToggle isDark={isDark} onToggle={onThemeToggle} />
     </div>

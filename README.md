@@ -1,4 +1,4 @@
-# Todo List
+gigit# Todo List
 
 A responsive React todo app based on the Simple ToDo List Figma design. It includes task creation, editing, deletion, completion states, search, filtering, and light/dark mode.
 
@@ -6,7 +6,7 @@ A responsive React todo app based on the Simple ToDo List Figma design. It inclu
 
 - Add, edit, complete, and delete notes
 - Search notes by text
-- Filter notes by `All`, `Completed`, and `Incompleted`
+- Filter notes by `All`, `Complete`, and `Incomplete`
 - Light and dark mode toggle
 - Crossed-out gray styling for completed notes
 - Custom empty-state illustration

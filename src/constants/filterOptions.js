@@ -1,5 +1,5 @@
 export const filterOptions = [
-  { value: 'all', label: 'ALL' },
-  { value: 'completed', label: 'COMPLETED' },
-  { value: 'incompleted', label: 'INCOMPLETED' },
+  { value: 'all', label: 'All' },
+  { value: 'completed', label: 'Complete' },
+  { value: 'incompleted', label: 'Incomplete' },
 ];

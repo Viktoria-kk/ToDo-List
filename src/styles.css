@@ -11,10 +11,12 @@
     "Segoe UI",
     sans-serif;
   --accent: #6c63ff;
+  --border: #6c63ff;
   --accent-hover: #534cc2;
   --light: #f7f7f7;
   --dark: #252525;
   --muted: #cdcdcd;
+  --placeholder: #c3c1e5;
   --danger: #e50000;
   --surface: #ffffff;
   --text: var(--dark);
@@ -52,6 +54,8 @@ button {
   --surface: #252525;
   --text: #f7f7f7;
   --muted: #ffffff80;
+  --border: #f7f7f7;
+  --placeholder: #666666;
   background: var(--dark);
 }
 
@@ -82,7 +86,7 @@ h1 {
   justify-content: space-between;
   align-items: center;
   gap: 12px;
-  border: 1px solid var(--accent);
+  border: 1px solid var(--border);
   border-radius: 5px;
   padding: 8.5px 16px;
   transition:
@@ -92,7 +96,7 @@ h1 {
 
 .modal input {
   width: 100%;
-  border: 1px solid var(--accent);
+  border: 1px solid var(--border);
   border-radius: 5px;
   padding: 8.5px 16px 8.5px 16px;
   background: transparent;
@@ -113,15 +117,7 @@ h1 {
 
 .search-field input::placeholder,
 .modal input::placeholder {
-  color: #c3c1e5;
-}
-
-.search-field:focus-within,
-.modal input:focus,
-.filter-trigger:focus,
-.filter-option:focus {
-  border-color: var(--accent-hover);
-  box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.18);
+  color: var(--placeholder);
 }
 
 .search-icon {
@@ -163,25 +159,25 @@ h1,
 
 .filter-trigger {
   display: flex;
-  width: 80px;
+  width: 78px;
   height: 38px;
   align-items: center;
   justify-content: center;
   gap: 27px;
   border-radius: 5px;
   padding: 10px;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 600;
   line-height: 1;
   outline: none;
 }
 
 .filter-dropdown--completed .filter-trigger {
-  width: 142px;
+  width: 146px;
 }
 
 .filter-dropdown--incompleted .filter-trigger {
-  width: 160px;
+  width: 164px;
 }
 
 .dropdown-arrow {
@@ -199,6 +195,7 @@ h1,
   z-index: 5;
   display: flex;
   flex-direction: column;
+  gap: 8px;
   min-width: 100%;
   overflow: hidden;
   border: 1px solid var(--accent);
@@ -212,7 +209,7 @@ h1,
   padding: 8.4px 5px;
   background: #ffffff;
   color: var(--accent);
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 600;
   line-height: 1;
   text-align: left;
@@ -323,9 +320,12 @@ h1,
   display: flex;
   flex: 0 0 auto;
   gap: 10px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.todo-item:hover .todo-actions {
   opacity: 1;
 }
-
 .icon-button {
   display: flex;
   align-items: center;
@@ -426,7 +426,7 @@ h1,
   width: min(calc(100vw - 36px), 500px);
   height: 289px;
   flex-direction: column;
-  border: 1px solid var(--accent);
+  border: 1px solid var(--border);
   border-radius: 16px;
   padding: 18px 30px;
   background: var(--surface);
