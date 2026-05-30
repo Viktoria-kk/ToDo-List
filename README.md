@@ -1,6 +1,6 @@
-# Todo List React App
+# Todo List
 
-A responsive React todo app based on the provided Simple ToDo List Figma mockup.
+A responsive React todo app based on the Simple ToDo List Figma design. It includes task creation, editing, deletion, completion states, search, filtering, and light/dark mode.
 
 ## Features
 
@@ -9,15 +9,16 @@ A responsive React todo app based on the provided Simple ToDo List Figma mockup.
 - Filter notes by `All`, `Completed`, and `Incompleted`
 - Light and dark mode toggle
 - Crossed-out gray styling for completed notes
-- Empty-state area with a placeholder for your image
-- Placeholder slots for your SVG icons
+- Custom empty-state illustration
+- Custom search, edit, delete, sun, and moon icons
 - Responsive layout for desktop and mobile screens
 
 ## Tech Stack
 
-- React
+- React 19
 - Vite
-- CSS
+- CSS3
+- Google Fonts: Inter, Kanit, and Outfit
 
 ## Project Structure
 
@@ -27,6 +28,12 @@ src/
   main.jsx
   styles.css
   assets/
+    detective-empty.png
+    edit.svg
+    moon.png
+    search.svg
+    sun.png
+    trash.svg
   components/
     AddButton.jsx
     EmptyState.jsx
@@ -46,25 +53,43 @@ src/
 The app uses local assets from [src/assets](./src/assets):
 
 - `detective-empty.png` for the empty state
+- `search.svg` for the search input
 - `sun.png` and `moon.png` for light/dark mode
 - `edit.svg` and `trash.svg` for note actions
 
-## Run Locally
+## Available Scripts
 
-Install dependencies:
+### Install dependencies
 
 ```bash
 npm install
 ```
 
-Start the development server:
+### Start development server
 
 ```bash
 npm run dev
 ```
 
-Create a production build:
+### Build for production
 
 ```bash
 npm run build
 ```
+
+### Preview production build
+
+```bash
+npm run preview
+```
+
+## Getting Started
+
+Clone the repository, install dependencies, and run the development server:
+
+```bash
+npm install
+npm run dev
+```
+
+Then open the local URL shown in the terminal.
