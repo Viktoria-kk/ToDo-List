@@ -1,4 +1,4 @@
-gigit# Todo List
+# Todo List
 
 A responsive React todo app based on the Simple ToDo List Figma design. It includes task creation, editing, deletion, completion states, search, filtering, and light/dark mode.
 
